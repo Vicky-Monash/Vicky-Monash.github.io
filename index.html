@@ -1,1 +1,44 @@
-Hello World
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <img src="images/NexHaven-logo.png" alt="Logo" class="center">
+</body>
+
+<!-- Credits: https://stackoverflow.com/a/35710128 -->
+<div class="wrapper">
+    <form class="center" action="releases/v1-0-2/kurbside-1.0.2-release.apk">
+        <div class="formtitle">
+            Enter password to download the Android apk
+        </div>
+        <br>
+        <div class="input nobottomborder">
+            <div class="pwd" align=center>
+                <input class="pwdbutton" type="password" id="password"  placeholder=" Password"/><br />
+            </div>
+            <br>
+            <div class="buttons">
+                <button class="btn" onclick="checkPassword()">Downlad Android APK </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script>
+function checkPassword(){
+ if(document.getElementById('password').value == 'nexhaven123$'){
+    alert('Downlaod apk');
+    location.href = "releases/v1-0-2/kurbside-1.0.2-release.apk";
+ } else {
+    alert('Wrong Password!');
+    return false;
+  }
+ }
+</script>
+</html>
